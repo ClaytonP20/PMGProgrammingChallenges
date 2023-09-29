@@ -1,10 +1,15 @@
+-- Clayton Perona // PMG Technical Assessment // September 29, 2023
 -- Write a query to get the sum of impressions by day.
 SELECT SUM(impressions), date
 FROM marketing_data
 GROUP BY date;
 
 -- Write a query to get the top three revenue-generating states in order of best to worst. How much revenue did the third best state generate?
-
+SELECT SUM(revenue) AS SumRevenue, state
+FROM website_revenue
+GROUP BY state
+ORDER BY SumRevenue DESC
+LIMIT 3;
 
 -- Write a query that shows total cost, impressions, clicks, and revenue of each campaign. Make sure to include the campaign name in the output.
 
