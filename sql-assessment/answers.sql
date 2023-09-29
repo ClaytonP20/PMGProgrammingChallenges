@@ -12,7 +12,10 @@ ORDER BY SumRevenue DESC
 LIMIT 3;
 
 -- Write a query that shows total cost, impressions, clicks, and revenue of each campaign. Make sure to include the campaign name in the output.
-
+SELECT campaign_info.name, marketing_data.cost, marketing_data.impressions, marketing_data.clicks, website_revenue.revenue
+FROM campaign_info
+JOIN marketing_data ON campaign_info.id=marketing_data.campaign_id
+JOIN website_revenue ON campaign_info.id=website_revenue.campaign_id;
 
 -- Write a query to get the number of conversions of Campaign5 by state. Which state generated the most conversions for this campaign?
 
