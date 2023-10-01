@@ -1,4 +1,4 @@
--- Clayton Perona // PMG Technical Assessment // September 29, 2023
+-- Clayton Perona // PMG Technical Assessment // October 1, 2023
 
 -- Write a query to get the sum of impressions by day.
 SELECT SUM(impressions), DATE(date) AS day
